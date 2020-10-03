@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 배추값 예측</title>
+</head>
+<body>
+<!-- year,avgTemp,minTemp,maxTemp,rainFall,avgPrice-->
+<form action="/kimch" method='POST'>
+    평균기온 : <input type="text" name="avgTemp" placeholder="평균온도"> <br>
+    최저온도 : <input type="text" name="minTemp" placeholder="최저온도"> <br>
+    최고온도 : <input type="text" name="maxTemp" placeholder="최고온"> <br>
+    강우량 : <input type="text" name="rainFall" placeholder="강수량"><br>
+    <br><br>
+    <input type="submit" value = "전송">
+
+
+</form>
+{%if result %}
+<p> 배추값 : {{result}}</p>
+{% endif %}
+<h4>예시값으로 예측된 배추 가격 : 5946</h4>
+
+
+</body>
+</html>
